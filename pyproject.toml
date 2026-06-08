@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-agent"
+version = "0.1.0"
+description = "Agentic analytics assistant: planner + typed tools + hybrid retrieval, with tracing and evals"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Venkateswarlu Nagineni" }]
+keywords = ["agents", "rag", "hybrid-retrieval", "llm", "observability", "genai"]
+
+dependencies = [
+    "pydantic>=2.6",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+retrieval = ["rank-bm25>=0.2", "faiss-cpu>=1.8", "sentence-transformers>=2.7"]
+agents = ["langgraph>=0.1", "anthropic>=0.28"]
+serve = ["fastapi>=0.110", "uvicorn>=0.29", "sse-starlette>=2.1"]
+dev = ["pytest>=8.0", "pytest-cov>=5.0", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

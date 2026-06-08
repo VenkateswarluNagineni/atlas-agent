@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Test / coverage / lint
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Indexes, traces, caches
+indexes/
+*.faiss
+traces/
+.cache/
+
+# Secrets / API keys
+.env
+ANTHROPIC_API_KEY
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
