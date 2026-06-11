@@ -8,7 +8,7 @@ design note. The daily build routine picks up the next unchecked phase.
 ## Foundations
 - [x] **Phase 0 — Scaffold.** Packaging, reciprocal-rank-fusion hybrid-retrieval core,
   typed `Tool` + `ToolRegistry`, tests, ruff, CI, Docker skeleton, roadmap.
-- [ ] **Phase 1 — Document store + chunking.** Ingest docs, chunk with overlap, stable ids.
+- [x] **Phase 1 — Document store + chunking.** Ingest docs, chunk with overlap, stable ids.
 - [ ] **Phase 2 — Lexical retriever (BM25).** Keyword retrieval over the chunk store.
 
 ## Retrieval
